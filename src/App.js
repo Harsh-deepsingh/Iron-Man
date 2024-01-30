@@ -19,15 +19,22 @@ function App() {
 
   return (
     <div className="App">
-      <form onSubmit={handleSubmit}>
-        <textarea
+      <div className="main">
+          <div className="chat">{response}</div>
+      </div>
+        <div className='center'>
+        <div className='type'>
+        <form onSubmit={handleSubmit}>
+        <input
+        placeholder="Enter your message..."
         value={message}
-        onChange={(e) => setMessage(e.target.value)}>
-        </textarea>
-        <button type="submit">Submit</button>
-      </form>
-      <div>{response}</div>
-    </div>
+        onChange={(e) => setMessage(e.target.value)} />       
+        <button type="submit" >
+        </button>
+        </form>
+        </div>
+        </div>
+      </div>
   );
 }
 
