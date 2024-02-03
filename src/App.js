@@ -1,5 +1,6 @@
 import './App.css';
 import { useState } from 'react';
+import Navbar from './Navbar/Navbar';
 
 const Guest = "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
 const Tony = "https://wellgroomedgentleman.com/wp-content/uploads/2023/10/Tony_Stark_Beard_with_Slicked_Back_Hair.width-800.jpg"
@@ -10,10 +11,10 @@ const App = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Save user input to conversations
+
     setConversations(prevConversations => [...prevConversations, { type: 'input', text: message }]);
     
-    // Fetch response from the server
+
     fetch('http://localhost:3001/', {
       method: 'POST',
       headers: {
@@ -23,15 +24,15 @@ const App = () => {
     })
     .then((res) => res.json())
     .then((data) => {
-      // Save server response to conversations
+
       setConversations(prevConversations => [...prevConversations, { type: 'output', text: data.message }]);
     });
     
-    // Clear the input field after submitting
     setMessage('');
   };
 
-  return (
+  return (<>
+        <Navbar />
     <div className="App">
       <div className="main">
         <div className="chat">
@@ -63,6 +64,7 @@ const App = () => {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

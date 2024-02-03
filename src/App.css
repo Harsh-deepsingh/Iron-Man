@@ -20,6 +20,7 @@
   text-align: left;
   overflow-y: auto; 
   padding: 10px; 
+  margin-top: 0px;
 }
 
 
@@ -61,38 +62,32 @@ input:focus {
   margin: 10px;
 }
 
-/* Scrollbar Styles */
-/* width */
+
 ::-webkit-scrollbar {
   width: 12px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: #121212;
 }
 
-/* Handle */
+
 ::-webkit-scrollbar-thumb {
   background: darkslategrey;
   border-radius: 10px;
 }
 
-/* Handle on hover */
+
 ::-webkit-scrollbar-thumb:hover {
   background: slategray;
 }
 
-
-
-/* Scrollbar Styles for Firefox */
-/* width */
 .scrollbar {
   scrollbar-width: thin;
   scrollbar-color: darkslategrey #121212;
 }
 
-/* Handle on hover */
+
 .chat:hover {
   scrollbar-color: slategray #121212;
 }

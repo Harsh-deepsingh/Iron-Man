@@ -6,7 +6,7 @@ const cors = require('cors');
 const app = express();
 const port = 3001;
 
-// Replace 'your_api_key_here' with your actual OpenAI API key
+
 const apiKey = process.env.OPENAI_API_KEY;
 
 const openai = new OpenAI({ apiKey });
@@ -39,13 +39,13 @@ You find yourself in your high-tech workshop, surrounded by cutting-edge technol
    AI: I am Iron man
 `;
 
-// Enable CORS
+
 app.use(cors());
 
 app.use(bodyParser.json());
 
 app.post('/', async (req, res) => {
-    // Your OpenAI logic
+
     const userMessage = req.body.message;
     const stream = await openai.chat.completions.create({
         model: "gpt-3.5-turbo",
