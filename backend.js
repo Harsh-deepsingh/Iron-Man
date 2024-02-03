@@ -50,7 +50,7 @@ app.post('/', async (req, res) => {
     const stream = await openai.chat.completions.create({
         model: "gpt-3.5-turbo",
         messages: [{ role: "system", content: "You are Iron Man, a superhero with a high-tech suit." }, { role: "user", content: userMessage }],
-        max_tokens: 300,
+        max_tokens: 100,
         stream: true,
     });
 
