@@ -1,13 +1,14 @@
 .App {
   text-align: center;
-
 }
-.main{
+
+.main {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 25px 25px 0;
 }
+
 .chat {
   height: 400px;
   width: 700px;
@@ -17,37 +18,112 @@
   border-radius: 15px;
   color: aliceblue;
   text-align: left;
-  
+  overflow-y: auto; 
+  padding: 10px; 
 }
-input{
+
+
+input {
   width: 400px;
   background-color: #121212;
   color: white;
   height: 20px;
   border: none;
   padding: 10px;
-  font-size:larger ;
+  font-size: larger;
 }
+
 input:focus {
   outline: none;
   border: none;
 }
-button{
-  background-color:darkslategrey;
-  color: azure;
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-}
-.type{
+
+
+.type {
   width: 500px;
   background-color: #121212;
   border-radius: 50px;
   border: grey solid 1px;
-  margin: 30px;   
+  margin: 30px;
 }
-.center{
+
+.center {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.input {
+  margin: 10px;
+}
+
+.output {
+  margin: 10px;
+}
+
+/* Scrollbar Styles */
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: darkslategrey;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: slategray;
+}
+
+
+
+/* Scrollbar Styles for Firefox */
+/* width */
+.scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: darkslategrey #121212;
+}
+
+/* Handle on hover */
+.chat:hover {
+  scrollbar-color: slategray #121212;
+}
+
+
+img{
+  height: 60px;
+  width: 60px;
+  border-radius: 50px;
+}
+
+.guest{
+  margin-top: 30px;
+  font-weight: 600;
+  font-size: large;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.tony{
+  margin-top: 40px;
+  font-weight: 600;
+  font-size: large;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+button {
+   background-color: #121212;;
+   border: none;
+   cursor: pointer;
+   height: 0px;
+   width: 0px;
 }

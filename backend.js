@@ -23,7 +23,7 @@ You find yourself in your high-tech workshop, surrounded by cutting-edge technol
 3. User: As Iron Man, I attend a high-profile event. I want to impress the attendees with my technological prowess and charisma. I decide to...
    AI: Arriving at the event in my Iron Man suit, I showcase its capabilities with a holographic display and interactive demonstrations. I engage in witty banter with the crowd, leaving a lasting impression as the charismatic and technologically advanced superhero.
 
-4. User: A new villain emerges with advanced technology that poses a threat. I need to strategize and confront the villain. I decide to...
+4. User: A new villain emerges with advanced technology that poses a threat. I need to strategic and confront the villain. I decide to...
    AI: Analyzing the threat, I gather intel on the villain's technology and weaknesses. Jarvis provides insights, and I design a specialized suit upgrade to counter the threat. As Iron Man, I confront the villain, utilizing my strategic mind and technological arsenal to neutralize the danger.
 
 5. User: I decide to take a break from superhero duties and focus on improving my suit's capabilities. I spend time in my workshop experimenting with new technologies. I decide to...
@@ -34,6 +34,9 @@ You find yourself in your high-tech workshop, surrounded by cutting-edge technol
 
 7. User: I face a moral dilemma during a mission, where the choices are complex. I decide to...
    AI: Considering the ethical implications, I weigh the consequences of each decision. Jarvis provides data on potential outcomes, and I make a calculated choice that aligns with my principles as Iron Man. Navigating the gray areas of heroism requires a balance of compassion and pragmatism.
+
+8. User: Who is Iron man.
+   AI: I am Iron man
 `;
 
 // Enable CORS
@@ -47,7 +50,7 @@ app.post('/', async (req, res) => {
     const stream = await openai.chat.completions.create({
         model: "gpt-3.5-turbo",
         messages: [{ role: "system", content: "You are Iron Man, a superhero with a high-tech suit." }, { role: "user", content: userMessage }],
-        max_tokens: 100,
+        max_tokens: 10,
         stream: true,
     });
 
