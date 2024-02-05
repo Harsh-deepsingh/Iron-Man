@@ -1,5 +1,13 @@
+@mixin mobile {
+  @media (max-width: 738px) {
+      @content;
+  }
+}
+
 .App {
   text-align: center;
+
+
 }
 
 .main {
@@ -7,6 +15,7 @@
   justify-content: center;
   align-items: center;
   padding: 25px 25px 0;
+
 }
 
 .chat {
@@ -21,6 +30,10 @@
   overflow-y: auto; 
   padding: 10px; 
   margin-top: 0px;
+
+  @include mobile{
+    height: 600px;
+  }
 }
 
 
@@ -32,6 +45,12 @@ input {
   border: none;
   padding: 10px;
   font-size: larger;
+
+  @include mobile{
+    width: 260px;
+    height: 12px;
+    margin-bottom: 2px;
+  }
 }
 
 input:focus {
@@ -46,6 +65,7 @@ input:focus {
   border-radius: 50px;
   border: grey solid 1px;
   margin: 30px;
+
 }
 
 .center {
